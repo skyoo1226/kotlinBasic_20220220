@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         btnLog.setOnClickListener {
 
 //            로그 버튼이 눌릴때마다 실행될 코드
-//            로그를 직어 보자
+//            로그를 찍어 보자  이벤트 처리
 
-            Log.d("메인화면", "로그 바튼 눌림")
+            Log.d("메인화면", "로그 버튼 눌림")
 
 
 
