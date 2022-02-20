@@ -25,18 +25,7 @@ class MainActivity : AppCompatActivity() {
             Log.e("메인화면", "e로 로그 찍어보기")
 
         }
-        btnToast.setOnClickListener {
 
-            Toast.makeText(토스트 바튼 눌림, "토스트 버튼 눌림", Toast.LENGTH_SHORT).show()
-
-
-            Log.d("확인","취소")
-
-        }
-
-
-
-        }
 
 
     }
