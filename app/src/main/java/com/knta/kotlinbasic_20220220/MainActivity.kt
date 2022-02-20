@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             else {
                 Toast.makeText( this, "초등학생 혹은 그 이하입니다", Toast.LENGTH_SHORT).show()
             }
-            }
+           }
         }
     }
 }
