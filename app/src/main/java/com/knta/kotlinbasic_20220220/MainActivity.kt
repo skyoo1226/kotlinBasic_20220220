@@ -53,6 +53,8 @@ class MainActivity : AppCompatActivity() {
 //            friendName = "조상민" // 한번 넣은걸로 계속 사용. val
 
 
+
+            Toast.makeText(this,myName,Toast.LENGTH_SHORT).show()
         }
 
     }
