@@ -52,32 +52,77 @@ class MainActivity : AppCompatActivity() {
             myName = "조진경" // 추가로 다시 대입해도 됨. var
 //            friendName = "조상민" // 한번 넣은걸로 계속 사용. val
 
+            Toast.makeText(this, myName, Toast.LENGTH_SHORT).show()
 
-
-            Toast.makeText(this,myName,Toast.LENGTH_SHORT).show()
         }
 
+        btnConditionPractice.setOnClickListener {
 
+            val userAge = 8
 
-        btnConditionpractice.setOnClickListener {
+            if (userAge >= 20) {
 
-            val userAge = 25
+//                userAge의 값이 20 이상이면 실행됨.
+                Toast.makeText(this, "성인입니다.", Toast.LENGTH_SHORT).show()
 
-            if (userAge >= 20)  {
-                Toast.makeText( this, "성인입니다", Toast.LENGTH_SHORT).show()
             }
             else if (userAge >= 17) {
-                Toast.makeText( this, "고등학생입니다", Toast.LENGTH_SHORT).show()
-
+//                위의 질문이 틀렸을때의 보완 질문 추가. => 고등학생인가?
+                Toast.makeText(this, "고등학생입니다.", Toast.LENGTH_SHORT).show()
             }
             else if (userAge >= 14) {
-                Toast.makeText( this, "중학생입니다", Toast.LENGTH_SHORT).show()
-
+                Toast.makeText(this, "중학생입니다.", Toast.LENGTH_SHORT).show()
             }
             else {
-                Toast.makeText( this, "초등학생 혹은 그 이하입니다", Toast.LENGTH_SHORT).show()
+//                위의 (모든) 질문이 틀렸을때 대응할 코드 추가.
+
+                Toast.makeText(this, "초등학생 혹은 그 이하입니다.", Toast.LENGTH_SHORT).show()
+
             }
-           }
+
         }
+
+        btnConditionPractice2.setOnClickListener {
+
+            val salary = 4000
+            val minutes = 50
+            val overWork = false
+
+//            기준 1. 연봉이 5천 이상이면 OK.
+
+            if (salary >= 5000) {
+                Toast.makeText(this, "연봉이 5천이상", Toast.LENGTH_SHORT).show()
+            }
+
+//            기준 2. 야근만 안하면 OK.
+
+            if (!overWork) {  // overWork변수에, true가 있을때만 실행. => NOT 부정 : 야근을 하지 않으면.
+                Toast.makeText(this, "야근을 안함", Toast.LENGTH_SHORT).show()
+            }
+
+//            기준 3. 연봉 4000이상, 거리 30분 이내
+
+            if (salary >= 4000 && minutes < 30) {
+                Toast.makeText(this, "연봉 AND 출퇴근시간 OK", Toast.LENGTH_SHORT).show()
+            }
+
+//            기준 4. 연봉 5000이상 OR 거리 1시간 이내
+
+            if (salary >= 5000 || minutes < 60) {
+                Toast.makeText(this, "연봉 OR 출퇴근시간 OK", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        btnCalculateAge.setOnClickListener {
+
+//            1. edtBirthYear에 입력된 값(text)을 받아오기 => 변수에 저장해두기.
+
+            val inputBirthYear =  edtBirthYear.text.toString()
+
+            Log.d("입력된 년도", inputBirthYear)
+
+        }
+
     }
 }
