@@ -3,6 +3,7 @@ package com.knta.kotlinbasic_20220220
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,17 @@ class MainActivity : AppCompatActivity() {
 //            로그를 찍어 보자  이벤트 처리
 
             Log.d("메인화면", "로그 버튼 눌림")
-            Log.e( "메인화면","e로 로그 찍어보기")
+            Log.e("메인화면", "e로 로그 찍어보기")
+
+        }
+        btnToast.setOnClickListener {
+
+            Toast.makeText(토스트 바튼 눌림, "토스트 버튼 눌림", Toast.LENGTH_SHORT).show()
+
+
+            Log.d("확인","취소")
+
+        }
 
 
 
