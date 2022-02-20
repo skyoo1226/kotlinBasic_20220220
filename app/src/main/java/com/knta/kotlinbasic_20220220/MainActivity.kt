@@ -2,6 +2,8 @@ package com.knta.kotlinbasic_20220220
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -9,6 +11,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        btnLog
+        // 아무말 => 메모 남김
+        // 단축키는 Ctrl + /
+
+//        btnLog 버튼이 눌리면 해야할 일
+        btnLog.setOnClickListener {
+
+//            로그 버튼이 눌릴때마다 실행될 코드
+//            로그를 직어 보자
+
+            Log.d("메인화면", "로그 바튼 눌림")
+
+
+
+        }
+
+
     }
 }
